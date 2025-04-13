@@ -1,6 +1,11 @@
+// const byteSize = (str) => {
+//   return new Blob([str]).size;
+// };
 const byteSize = (str) => {
-  return new Blob([str]).size;
+  return new TextEncoder().encode(str).length;
 };
+
+
 
 // Do not change the code below
 const str = prompt("Enter some string.");
